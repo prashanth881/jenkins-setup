@@ -4,7 +4,8 @@
   "description": "new jenkins setup",
   "main": "index.html",
   "scripts": {
-    "test": " build: \"if [ ! -d new ]; then mkdir new; fi && cp -r figma_task2/* new/\""
+    "build": "if [ ! -d new ]; then mkdir new; fi && cp -r figma_task2/* new/",
+    "test": "npm run build"  // Assuming you want to run the build script when testing
   },
   "repository": {
     "type": "git",
