@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "build": "if [ ! -d new ]; then mkdir new; fi && cp -r figma_task2/* new/",
-    "test": "npm run build"  // Assuming you want to run the build script when testing
+    "test": "npm run build"
   },
   "repository": {
     "type": "git",
