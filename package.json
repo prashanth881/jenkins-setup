@@ -1,0 +1,23 @@
+{
+  "name": "branch",
+  "version": "1.0.0",
+  "description": "new jenkins setup",
+  "main": "index.html",
+  "scripts": {
+    "test": " build: \"if [ ! -d new ]; then mkdir new; fi && cp -r figma_task2/* new/\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prashanth881/jenkins-setup.git"
+  },
+  "keywords": [
+    "jenkins",
+    "setup"
+  ],
+  "author": "prashanth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prashanth881/jenkins-setup/issues"
+  },
+  "homepage": "https://github.com/prashanth881/jenkins-setup#readme"
+}
