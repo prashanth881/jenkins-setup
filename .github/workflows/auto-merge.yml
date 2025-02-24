@@ -1,0 +1,24 @@
+name: Auto Merge to Master
+
+on:
+  push:
+    branches:
+      - '*'  # Trigger on push to any branch
+    paths-ignore:
+      - 'master'  # Ignore pushes to master
+
+jobs:
+  create-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: "Merge changes from ${{ github.ref }}"
+          body: "This pull request merges changes from branch `${{ github.ref }}` into master."
+          base: master
+          head: ${{ github.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
